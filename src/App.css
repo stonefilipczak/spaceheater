@@ -1,33 +1,530 @@
-.App {
+.chassis {
+  background: linear-gradient(to right, #ffe600, #ffc400);
+  height: 700px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 10px;
+  padding-top: 0px;
+
+  border-radius: 30px;
+  border-bottom-left-radius: 100%50px;
+  border-bottom-right-radius: 100%50px;
+  z-index: -2;
+  position: relative;
+}
+.buttonbox {
+  background: linear-gradient(to right, #ffc400, #ffe600);
+  height: 260px;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  position: relative;
+  margin-top: -343px;
+  padding: 10px;
+  border-radius: -30px;
+  border-bottom-left-radius: 100%50px;
+  border-bottom-right-radius: 100%50px;
+}
+
+.hat {
+  background: linear-gradient(to right, #ffc400, #ffe600);
+  height: 30px;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+  position: relative;
+
+  border-radius: -30px;
+}
+
+.outer_screen {
+  background-color: rgb(49, 49, 49);
+  height: 300px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+
   text-align: center;
+  border-style: inset;
+  border-width: 1px;
+  border-radius: 30px;
+  border-bottom-left-radius: 100%30px;
+  border-bottom-right-radius: 100%30px;
+  padding-top: 40px;
+
+  color: gray;
+  font-size: 27px;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.inner_screen {
+  background-color: rgb(229, 255, 223);
+
+  height: 70%;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  border-style: inset;
+  animation: psycho 0.1s infinite;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes psycho {
+  from {
+    background-color: rgb(229, 255, 223);
+  }
+  to {
+    background-color: rgba(229, 255, 223, 0.973);
+  }
+}
+
+.badge {
+  margin-left: 30%;
+  margin-right: 40%;
+  margin-top: 15px;
+  font-size: 20px;
+  border-style: solid;
+  width: 37%;
+  color: #c9a327d5;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.arrowbox {
+  width: 120px;
+  height: 70px;
+  margin-left: -50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-top: -50px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.arrow {
+  background: linear-gradient(to right, rgb(74, 74, 255), rgb(35, 35, 255));
+  width: 19px;
+  height: 19px;
+  padding: 8px;
+  margin: 0px;
+  color: rgb(36, 36, 197);
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+#L {
+  background: linear-gradient(to left, rgb(74, 74, 255), rgb(35, 35, 255));
+  margin-left: -74px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+}
+
+#U {
+  margin-top: -35px;
+  margin-left: 35px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: none;
+}
+
+#R {
+  background: linear-gradient(to left, rgb(74, 74, 255), rgb(35, 35, 255));
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+}
+
+#v {
+  margin-left: 35px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: none;
+}
+
+#o {
+  border: none;
+  height: 23px;
+}
+
+button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  position: relative;
+  font-weight: bold;
+  border-color: black;
+  cursor: pointer;
+}
+
+.B {
+  background: linear-gradient(to right, rgb(76, 161, 76), rgb(18, 170, 18));
+  margin-right: 10px;
+  margin-top: -20px;
+  margin-left: 185px;
+  color: green;
+}
+
+.A {
+  background: linear-gradient(to right, rgb(253, 94, 94), red);
+  margin-top: 20px;
+  margin-left: 250px;
+  color: red;
+}
+
+p {
+  background-color: rgba(0, 0, 0, 0.705);
+  width: 35px;
+  height: 10px;
+
+  border-radius: 50%;
+}
+
+.start {
+  margin-left: 80px;
+  margin-top: 50px;
+}
+
+.select {
+  margin-left: 145px;
+  margin-top: -27px;
+}
+
+.selected {
+  border-style: double;
+  border-width: 4px;
+  border-radius: 5px;
+  /* animation: blink 20s infinite; */
+}
+
+/* @keyframes blink {
+  0% {
+    border-color: black;
+    font-weight: noraml;
+  }
+  50% {
+    border-color: rgb(229, 255, 223);
+    color: red;
+    text-shadow: 0px 10px black;
+  }
+  100% {
+    border-color: black;
+    font-weight: normal;
+  }
+} */
+
+@font-face {
+  font-family: "Pokemon";
+  src: URL("./fonts/Pokemon GB.ttf") format("truetype");
+}
+
+span {
+  font-family: "Pokemon";
+  font-style: normal;
+  font-size: 13px;
+  padding: 5px;
+  margin: 3px;
+  color: black;
+  font-weight: normal;
+}
+
+.songbox {
+  font-family: "Pokemon";
+  font-style: normal;
+  font-size: 13px;
+  padding: 5px;
+  margin: 5px;
+  color: black;
+  font-weight: normal;
+  text-align: left;
+}
+
+.song {
+  margin: 5px;
+  padding: 5px;
+
+  border-top: none;
+  border-bottom: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.play {
+  float: right;
+  margin-top: -10px;
+}
+
+.pause {
+  float: right;
+  margin-top: -15px;
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+@keyframes move {
+  0% {
+  }
+  50% {
+    margin-right: 25px;
+  }
+  100% {
+  }
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.wall {
+  background-image: url("./pics/eddy.png");
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  background-repeat: space;
+  height: 1000px;
+}
+
+.home {
+  font-size: 50px;
+  margin-top: 30px;
+  color: transparent;
+  height: 200px;
+
+  -webkit-background-clip: text;
+  animation: rainbow 2s linear;
+}
+
+@keyframes rainbow {
+  5% {
+    background-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      red,
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    );
+  }
+  10% {
+    background-image: linear-gradient(
+      to right,
+      orange,
+      red,
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    );
+  }
+  15% {
+    background-image: linear-gradient(
+      to right,
+      yellow,
+      orange,
+      red,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    );
+  }
+  20% {
+    background-image: linear-gradient(
+      to right,
+      green,
+      yellow,
+      orange,
+      red,
+      transparent,
+      transparent,
+      transparent
+    );
+  }
+  25% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      transparent,
+      transparent
+    );
+  }
+  30% {
+    background-image: linear-gradient(
+      to right,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red,
+      transparent
+    );
+  }
+  35% {
+    background-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
+    );
+  }
+  40% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange
+    );
+  }
+  45% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      blue,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      blue,
+      blue,
+      violet,
+      indigo,
+      blue,
+      green
+    );
+  }
+  55% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      blue,
+      blue,
+      blue,
+      violet,
+      indigo,
+      blue
+    );
+  }
+  60% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      blue,
+      blue,
+      blue,
+      blue,
+      violet,
+      indigo
+    );
+  }
+  65% {
+    background-image: linear-gradient(
+      to right,
+      blue,
+      blue,
+      blue,
+      blue,
+      blue,
+      blue,
+      violet
+    );
+  }
+  70% {
+  }
+}
+
+.mountain {
+  animation: fucker 10s linear infinite;
+}
+
+@keyframes mountain {
+  0% {
+  }
+  50% {
+  }
+  51% {
+    text-shadow: 300px 100px black;
+    margin-left: -300px;
+  }
+
+  60% {
+    margin-bottom: 1100px;
+    font-size: 100px;
+  }
+
+  70% {
+    font-size: 300px;
+  }
+  100% {
+  }
+}
+@keyframes fucker {
+  0% {
+    text-shadow: none;
+  }
+
+  25% {
+    text-shadow: 0px 100px black;
+    margin-top: 50px;
+    color: red;
+  }
+  50% {
+  }
+  75% {
+    text-shadow: 0px 200px black;
+    margin-top: 0px;
+    color: blue;
+  }
+  100% {
+    text-shadow: none;
   }
 }
