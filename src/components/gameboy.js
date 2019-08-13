@@ -138,9 +138,7 @@ class Gameboy extends React.Component {
             <div className="inner_screen">
               {this.state.options.map((option, i) => (
                 <span
-                  className={`${this.state.scene} ${
-                    this.state.cursor === i ? "selected" : ""
-                  }`}
+                  className={` ${this.state.cursor === i ? "selected" : ""}`}
                   id={option}
                   key={option}
                 >
