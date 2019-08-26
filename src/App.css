@@ -301,15 +301,6 @@ button:focus {
   }
 }
 
-.wall {
-  background-image: url("./pics/eddy.png");
-  background-size: cover;
-  position: relative;
-  z-index: -2;
-  background-repeat: space;
-  height: 1000px;
-}
-
 .home {
   font-size: 50px;
   margin-top: 30px;
