@@ -169,6 +169,7 @@ button {
   font-weight: bold;
   border-color: black;
   cursor: pointer;
+  text-align: center;
 }
 
 .B {
@@ -316,7 +317,7 @@ button:focus {
   height: 200px;
 
   -webkit-background-clip: text;
-  animation: rainbow 2s linear;
+  animation: rainbow 2.5s linear;
 }
 
 @keyframes rainbow {
@@ -372,7 +373,7 @@ button:focus {
   25% {
     background-image: linear-gradient(
       to right,
-      blue,
+      rgb(35, 35, 255),
       green,
       yellow,
       orange,
@@ -385,7 +386,7 @@ button:focus {
     background-image: linear-gradient(
       to right,
       indigo,
-      blue,
+      rgb(35, 35, 255),
       green,
       yellow,
       orange,
@@ -399,7 +400,7 @@ button:focus {
       to right,
       violet,
       indigo,
-      blue,
+      rgb(35, 35, 255),
       green,
       yellow,
       orange,
@@ -409,10 +410,10 @@ button:focus {
   40% {
     background-image: linear-gradient(
       to right,
-      blue,
+      rgb(35, 35, 255),
       violet,
       indigo,
-      blue,
+      rgb(35, 35, 255),
       green,
       yellow,
       orange
@@ -421,11 +422,11 @@ button:focus {
   45% {
     background-image: linear-gradient(
       to right,
-      blue,
-      blue,
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
       violet,
       indigo,
-      blue,
+      rgb(35, 35, 255),
       green,
       yellow
     );
@@ -433,35 +434,35 @@ button:focus {
   50% {
     background-image: linear-gradient(
       to right,
-      blue,
-      blue,
-      blue,
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
       violet,
       indigo,
-      blue,
+      rgb(35, 35, 255),
       green
     );
   }
   55% {
     background-image: linear-gradient(
       to right,
-      blue,
-      blue,
-      blue,
-      blue,
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
       violet,
       indigo,
-      blue
+      rgb(35, 35, 255)
     );
   }
   60% {
     background-image: linear-gradient(
       to right,
-      blue,
-      blue,
-      blue,
-      blue,
-      blue,
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
       violet,
       indigo
     );
@@ -469,12 +470,12 @@ button:focus {
   65% {
     background-image: linear-gradient(
       to right,
-      blue,
-      blue,
-      blue,
-      blue,
-      blue,
-      blue,
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
+      rgb(35, 35, 255),
       violet
     );
   }
@@ -482,60 +483,31 @@ button:focus {
   }
 }
 
-.mountain {
-  animation: mountain 0.1s linear infinite;
-  margin-top: -10px;
-  font-size: 45px;
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: rgba(0, 0, 0, 0.705);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
 }
 
-@keyframes mountain {
-  0% {
-    color: black;
-  }
-  50% {
-  }
-  51% {
-    transform: rotate(180deg);
-  }
-
-  60% {
-  }
-
-  70% {
-    color: black;
-    margin-bottom: 40px;
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.dotbox {
+  width: 100px;
+  float: right;
+  margin-top: -30px;
+  margin-right: -60px;
+  transform: skewY(-7deg);
 }
-@keyframes fucker {
-  0% {
-    text-shadow: none;
-  }
-
-  25% {
-    text-shadow: 0px 100px black;
-    margin-top: 50px;
-    color: red;
-  }
-  50% {
-  }
-  75% {
-    text-shadow: 0px 200px black;
-    margin-top: 0px;
-    color: blue;
-  }
-  100% {
-    text-shadow: none;
-  }
+.pale {
+  background-color: #ffce2c;
 }
 
 /* MEDIA QUERIESSSSSSS */
 
 @media screen and (max-width: 480px) {
   body {
-    background-color: blue;
+    background-color: black;
   }
 
   .chassis {
@@ -559,5 +531,24 @@ button:focus {
 
   .A {
     margin-left: 230px;
+  }
+
+  span {
+    font-size: 11px;
+  }
+
+  .songbox {
+    font-size: 12px;
+  }
+  .dot {
+    height: 5px;
+    width: 5px;
+  }
+  .dotbox {
+    margin-top: -50px;
+    width: 70px;
+    margin-right: -40px;
+    height: 70px;
+    overflow: hidden;
   }
 }
